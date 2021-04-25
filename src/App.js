@@ -106,7 +106,7 @@ function App() {
       return `${option.property}(${option.value}${option.unit})`
     })
 
-    return { filter: filters.join(' ')}
+    return { filter: filters.join(' ') }
   }
 
   console.log(getImageStyle())
