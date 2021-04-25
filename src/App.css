@@ -29,7 +29,42 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: purple;
+  background-color: hsl(265, 100%, 86%);
+  border-left: 1px solid hsl(265, 100%, 56%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sidebar-item{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color:hsl(265, 100%, 86%);
+  padding:1rem;
+  position: relative;
+}
+
+.sidebar-item:hover, .sidebar-item:focus {
+  background-color: hsl(265, 100%, 76%);
+}
+
+.sidebar-item.active {
+  background-color:hsl(265, 100%,70%);
+}
+
+.sidebar-item::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  height: 1px;
+  background-color: hsl(265, 100%, 76%);
+}
+
+.sidebar-item:last-child::after {
+  display: none;
 }
 
 .slider-container {
